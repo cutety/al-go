@@ -1,13 +1,13 @@
 package binary_search_tree
 
 import "fmt"
-
+// Node 二叉树
 type Node struct {
 	Value int
 	Left *Node
 	Right *Node
 }
-
+// Insert 插入
 func (node *Node) Insert(value int) {
 	if  node.Value > value {
 		if node.Left == nil {
@@ -35,7 +35,7 @@ func (node *Node) InOrder() {
 	}
 }
 
-
+// PreOrder 先序遍历
 func (node *Node) PreOrder() {
 	fmt.Print(node.Value, ",")
 	if node.Left != nil {
@@ -45,7 +45,7 @@ func (node *Node) PreOrder() {
 		node.Right.PreOrder()
 	}
 }
-
+// PostOrder 后序遍历
 func (node *Node) PostOrder() {
 	if node.Left != nil {
 		node.Left.PostOrder()
