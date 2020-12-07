@@ -16,11 +16,19 @@ func TestBST(t *testing.T) {
 	node.PreOrder()
 	fmt.Println()
 	node.PostOrder()
+	fmt.Println()
+	fmt.Println(node.GetMin())
+	fmt.Println(node.GetMax())
+	fmt.Println(node.Find(21))
+	fmt.Println(node.Find(25).Value)
+
 
 	// 输出
-	// === RUN   TestBST
 	// 15 18 20 22 25
 	// 20,15,18,25,22,
-	// 	18,15,22,25,20,--- PASS: TestBST (0.00s)
-	// PASS
+	// 18,15,22,25,20,
+	// 15
+	// 25
+	// <nil>
+	// 25
 }
