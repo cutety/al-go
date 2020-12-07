@@ -55,3 +55,34 @@ func (node *Node) PostOrder() {
 	}
 	fmt.Print(node.Value,",")
 }
+
+// GetMin 获取最小值
+func (node *Node) GetMin() int {
+	cur := node
+	for cur.Left != nil {
+		cur = cur.Left
+	}
+	return cur.Value
+}
+
+// GetMax 获取最大值
+func (node *Node) GetMax() int {
+	if node.Right != nil {
+		node.Right.GetMax()
+		return node.Right.Value
+	} else {
+		return node.Value
+	}
+}
+
+// Find 查找指定数
+func (node *Node) Find(value int) *Node {
+	if node.Value == value {
+		return node
+	} else if node.Value > value && node.Left != nil {
+		return node.Left.Find(value)
+	} else if node.Right != nil {
+		return node.Right.Find(value)
+	}
+	return nil
+}
