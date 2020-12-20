@@ -6,7 +6,7 @@ import (
 )
 
 func TestInsertionSort(t *testing.T) {
-	list := []int{1,3,5,2,4}
+	list := []int{5,9,1,6,8,14,6,49,25,4,6,3}
 	InsertionSort(list)
 	fmt.Println(list)
 }
@@ -17,7 +17,7 @@ func InsertionSort(nums []int) {
 		j := i - 1
 		if cur < nums[j] {
 			// 需要排序
-			for ; j > 0 && cur < nums[j]; j-- {
+			for ; j >= 0 && cur < nums[j]; j-- {
 				nums[j+1] = nums[j]
 			}
 			nums[j+1] = cur
@@ -25,5 +25,5 @@ func InsertionSort(nums []int) {
 	}
 }
 
-// 1 3 5 2 4
-// 1 3 5
+// output [1 3 4 5 6 6 6 8 9 14 25 49]
+
