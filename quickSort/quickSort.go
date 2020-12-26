@@ -1,6 +1,6 @@
-package quickSort
+package quicksort
 
-func  Partition(nums []int, low, high int) int {
+func Partition(nums []int, low, high int) int {
 	pivot := nums[low]
 	i := low
 	j := high
@@ -21,8 +21,8 @@ func  Partition(nums []int, low, high int) int {
 
 func QuickSort(nums []int, low, high int) {
 	if low < high {
-		 j := Partition(nums, low, high)
-		 QuickSort(nums, low, j)
-		 QuickSort(nums, j + 1, high)
+		j := Partition(nums, low, high)
+		QuickSort(nums, low, j)
+		QuickSort(nums, j+1, high)
 	}
 }

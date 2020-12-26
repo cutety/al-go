@@ -1,4 +1,4 @@
-package binary_search_tree
+package binarysearchtree
 
 import (
 	"fmt"
@@ -21,7 +21,6 @@ func TestBST(t *testing.T) {
 	fmt.Println(node.GetMax())
 	fmt.Println(node.Find(21))
 	fmt.Println(node.Find(25).Value)
-
 
 	// 输出
 	// 15 18 20 22 25

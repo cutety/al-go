@@ -1,14 +1,14 @@
-package stack_linked_list_impl
+package stacklinkedlistimpl
 
 import (
 	"fmt"
-	"github.com/cutety/al-go/linked_list"
 	"testing"
+
+	"github.com/cutety/al-go/linkedlist"
 )
 
-
 func TestStack(t *testing.T) {
-	stack :=  &Stack{Node: &linked_list.Node{}}
+	stack := &Stack{Node: &linkedlist.Node{}}
 	stack.Push(4)
 	stack.Push(7)
 	stack.Push(2)

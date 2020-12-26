@@ -1,4 +1,4 @@
-package shell_sort
+package shellsort
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 )
 
 func TestShellSort(t *testing.T) {
-	nums := []int{3,5,2,6,4,7,1,0}
+	nums := []int{3, 5, 2, 6, 4, 7, 1, 0}
 	ShellSort(nums)
 	fmt.Println(nums)
 }

@@ -1,17 +1,20 @@
-package stack_linked_list_impl
+package stacklinkedlistimpl
 
-import "github.com/cutety/al-go/linked_list"
+import "github.com/cutety/al-go/linkedlist"
 
+// Stack 用链表实现栈
 type Stack struct {
-	Node *linked_list.Node
+	Node *linkedlist.Node
 }
 
-func(stack *Stack) Push(value int) {
-	newNode := &linked_list.Node{Value: value}
+// Push 入栈
+func (stack *Stack) Push(value int) {
+	newNode := &linkedlist.Node{Value: value}
 	newNode.Next = stack.Node
 	stack.Node = newNode
 }
 
+// Pop 出栈
 func (stack *Stack) Pop() int {
 	//tempNode := stack.Node
 	//stack.Node = stack.Node.Next

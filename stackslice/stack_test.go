@@ -1,4 +1,4 @@
-package stack_slice_impl
+package stackslice
 
 import (
 	"fmt"

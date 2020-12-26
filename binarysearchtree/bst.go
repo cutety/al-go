@@ -1,15 +1,17 @@
-package binary_search_tree
+package binarysearchtree
 
 import "fmt"
+
 // Node 二叉树
 type Node struct {
 	Value int
-	Left *Node
+	Left  *Node
 	Right *Node
 }
+
 // Insert 插入
 func (node *Node) Insert(value int) {
-	if  node.Value > value {
+	if node.Value > value {
 		if node.Left == nil {
 			node.Left = &Node{Value: value}
 		} else {
@@ -29,7 +31,7 @@ func (node *Node) InOrder() {
 	if node.Left != nil {
 		node.Left.InOrder()
 	}
-	fmt.Print(node.Value," ")
+	fmt.Print(node.Value, " ")
 	if node.Right != nil {
 		node.Right.InOrder()
 	}
@@ -45,6 +47,7 @@ func (node *Node) PreOrder() {
 		node.Right.PreOrder()
 	}
 }
+
 // PostOrder 后序遍历
 func (node *Node) PostOrder() {
 	if node.Left != nil {
@@ -53,7 +56,7 @@ func (node *Node) PostOrder() {
 	if node.Right != nil {
 		node.Right.PostOrder()
 	}
-	fmt.Print(node.Value,",")
+	fmt.Print(node.Value, ",")
 }
 
 // GetMin 获取最小值

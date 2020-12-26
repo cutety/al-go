@@ -1,4 +1,4 @@
-package insertion_sort
+package insertionsort
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 )
 
 func TestInsertionSort(t *testing.T) {
-	list := []int{5,9,1,6,8,14,6,49,25,4,6,3}
+	list := []int{5, 9, 1, 6, 8, 14, 6, 49, 25, 4, 6, 3}
 	InsertionSort(list)
 	fmt.Println(list)
 }
@@ -26,4 +26,3 @@ func InsertionSort(nums []int) {
 }
 
 // output [1 3 4 5 6 6 6 8 9 14 25 49]
-
