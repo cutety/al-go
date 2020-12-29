@@ -25,8 +25,9 @@ func (c *Client) Add(IP string, weight int) error {
 		return errors.New("weight can not be negative")
 	}
 	server := &Server{
-		IP:     IP,
-		Weight: weight,
+		IP:            IP,
+		Weight:        weight,
+		CurrentWeight: weight,
 	}
 	c.Servers = append(c.Servers, server)
 	return nil
