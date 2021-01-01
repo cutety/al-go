@@ -22,12 +22,16 @@ func initDoubleLinkedList(key, value int) *DoubleLinkedList {
 
 // NewLRUCache 创建一个LRUCache
 func NewLRUCache(capacity int) *LRUCache {
+	head := initDoubleLinkedList(0, 0)
+	tail := initDoubleLinkedList(0, 0)
+	head.next = tail
+	tail.prev = head
 	return &LRUCache{
 		size:     0,
 		capacity: capacity,
 		cache:    map[int]*DoubleLinkedList{},
-		head:     initDoubleLinkedList(0, 0),
-		tail:     initDoubleLinkedList(0, 0),
+		head:     head,
+		tail:     tail,
 	}
 }
 

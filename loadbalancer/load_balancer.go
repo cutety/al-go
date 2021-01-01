@@ -1,4 +1,4 @@
-package loadBalancer
+package loadbalancer
 
 import (
 	"errors"
