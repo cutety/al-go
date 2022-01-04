@@ -2,9 +2,9 @@ package quicksort
 
 func Partition(nums []int, low, high int) int {
 	pivot := nums[low]
-	i := low
+	i := low + 1
 	j := high
-	for i < j {
+	for i <= j {
 		if nums[i] >= pivot && nums[j] < pivot {
 			nums[i], nums[j] = nums[j], nums[i]
 			i++
