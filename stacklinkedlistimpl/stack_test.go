@@ -8,7 +8,7 @@ import (
 )
 
 func TestStack(t *testing.T) {
-	stack := &Stack{Node: &linkedlist.Node{}}
+	stack := &Stack{Node: &linkedlist.ListNode{}}
 	stack.Push(4)
 	stack.Push(7)
 	stack.Push(2)

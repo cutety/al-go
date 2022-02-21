@@ -4,12 +4,12 @@ import "github.com/cutety/al-go/linkedlist"
 
 // Stack 用链表实现栈
 type Stack struct {
-	Node *linkedlist.Node
+	Node *linkedlist.ListNode
 }
 
 // Push 入栈
 func (stack *Stack) Push(value int) {
-	newNode := &linkedlist.Node{Value: value}
+	newNode := &linkedlist.ListNode{Value: value}
 	newNode.Next = stack.Node
 	stack.Node = newNode
 }
